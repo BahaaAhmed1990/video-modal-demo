@@ -1,0 +1,143 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+}
+section{
+    padding: 0 133px;
+    height: 600px;
+    position: relative;
+}
+
+.plan-wrapper{
+    margin: 10px auto;
+}
+
+.img-wrapper{
+    display: inline-block;
+    position: relative;
+}
+.img{
+    position: absolute;
+}
+
+#pic-1{
+    z-index: 4;
+}
+
+#pic-2{
+    z-index: 2;
+}
+ video{
+    position: absolute;
+    z-index: 2;
+ }
+    
+button{
+    position: relative;padding: 10px;
+    font-size: 18px;
+    }
+    
+     #btn-1,#btn-3{
+        right: -790px;
+        bottom: -220px;
+        z-index: 10;
+    }
+
+    #btn-2,#btn-4{
+        bottom: -220px;
+        z-index: 10;
+    }
+
+    .wrapper-1,.wrapper-2,.loader-wrapper{
+        position: absolute;
+    }
+    .wrapper-1{
+        z-index: 3;
+    }
+    .wrapper-2{
+        z-index: 2;
+    }
+.loader-wrapper{
+    background-color: darkslategray;
+    z-index: 2;
+    bottom: 20%;
+    width: 857px;
+    height: 484px;
+    transform: translateX(150%);
+}
+
+.loader-wrapper.enter{
+    animation: enter 1s ease-in-out ;
+    animation-fill-mode: forwards;
+}
+
+.loader-wrapper.exit{
+    animation: exit 1s ease-in-out ;
+    animation-fill-mode: forwards;
+}
+    .loader {
+        width: 48px;
+        height: 48px;
+        border: 2px solid #FFF;
+        border-radius: 50%;
+        display: inline-block;
+        position: relative;
+        box-sizing: border-box;
+        animation: rotation 1s linear infinite;
+        left: 50%;
+    bottom: -46%;
+      }
+      .loader::after,
+      .loader::before {
+        content: '';  
+        box-sizing: border-box;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #FF3D00;
+        width: 6px;
+        height: 6px;
+        transform: translate(150%, 150%);
+        border-radius: 50%;
+      }
+      .loader::before {
+        left: auto;
+        top: auto;
+        right: 0;
+        bottom: 0;
+        transform: translate(-150%, -150%);
+      }
+      
+      @keyframes rotation {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      } 
+
+      @keyframes enter {
+        0% {
+          transform: translateX(150%);
+        }
+        75%{
+            transform: translateX(-20%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      } 
+
+      @keyframes exit {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(150%);
+        }
+      } 
